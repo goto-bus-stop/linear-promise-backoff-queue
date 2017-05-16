@@ -1,0 +1,12 @@
+{
+  "name": "linear-promise-backoff-queue",
+  "version": "1.0.0",
+  "description": "Rate limit calls to promise-returning functions with linear backoff.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Renée Kooi <renee@kooi.me>",
+  "license": "MIT"
+}
