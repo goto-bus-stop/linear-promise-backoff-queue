@@ -4,9 +4,12 @@
   "description": "Rate limit calls to promise-returning functions with linear backoff.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape test.js"
   },
   "keywords": [],
   "author": "Renée Kooi <renee@kooi.me>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^4.6.3"
+  }
 }
