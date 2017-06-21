@@ -49,6 +49,7 @@ module.exports = function createBackoff (opts) {
       args[i] = arguments[i];
     }
     queueCall()
+    var waitDelay = currentDelay
 
     // `result` will resolve with the result of the function call.
     var result = lastCall.then(function () {
@@ -59,7 +60,7 @@ module.exports = function createBackoff (opts) {
     lastCall = result
       .then(function () { return null }) // Ignore return value of previous call.
       .catch(function () { return null }) // Ignore errors.
-      .then(function () { return delay(currentDelay) })
+      .then(function () { return delay(waitDelay) })
       .then(function (value) {
         unqueueCall()
         return value
